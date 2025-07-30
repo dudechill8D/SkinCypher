@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "skincypher",
+  "version": "${version}",
+  "name": "SkinCypher",
+  "description": "Minecraft mod that encodes data into unused player skin textures for custom capes",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/skincypher/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.dudechill8D.skincypher.client.SkincypherDataGenerator"
+    ],
+    "client": [
+      "com.dudechill8D.skincypher.client.SkincypherClient"
+    ],
+    "main": [
+      "com.dudechill8D.skincypher.Skincypher"
+    ]
+  },
+  "mixins": [
+    "skincypher.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
